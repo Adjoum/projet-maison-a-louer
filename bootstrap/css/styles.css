@@ -1,0 +1,1388 @@
+/* css du navbar et du footer */
+html, body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+    flex-wrap: wrap;
+    line-height: 1.6;
+    height: 100vh; /* 100% de la hauteur de la fenêtre */
+   
+}
+
+
+  
+  
+  .humberger{
+    color: white;
+    background-color: black;
+    
+  }
+  
+  .navbar{
+      box-shadow: 0 6px 6px;
+      background-color: rgb(13, 71, 161);
+  
+  }
+  
+  
+  .navbar a {
+      position: relative;
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+  
+  .navbar a::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color:  #ff9900; /* Couleur de l'effet */
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+  }
+  
+.navbar a:hover {
+      transform: scale(1.1); /* Effet de zoom sur le survol */
+  } 
+  .navbar a:hover::after {
+      transform: scaleX(1);
+  }
+  
+  
+  .logo img {
+      width: 83%;
+      height: 7vh;
+      margin-left: 15px;
+      
+  }
+
+  footer p {
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Couleur de fond du footer */
+footer {
+    background-color: #0D47A1;
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+
+.footer-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-links li a {
+    
+    text-decoration: none;
+    color:  rgba(245, 245, 245, 0.281);
+}
+.footer-links li a:hover {
+    
+    
+    color:  white;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+footer p {
+    color: rgba(245, 245, 245, 0.281);
+    font-family: Arial, sans-serif;
+}
+
+
+  
+  /* css de la page d'accueil */
+
+  .nav-item{
+      font-size: 120%;
+  }
+  
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #ff9900;
+      color: #fff;
+    padding: 15px 30px;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: background-color 0.3s ease;
+    margin-top: 150px;
+  }
+  
+  .cta-button:hover {
+    background-color: rgba(0, 0, 0, .55);
+      color: white;
+      cursor: pointor
+  }
+
+  .features {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.feature {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+}
+
+.fonctionalite{
+    margin-top: -45px;
+}
+.feature .fonct1 {
+    width: 350px;
+    height: 350px;
+    margin-top: -100px;
+    margin-bottom: 0%;
+}
+
+.feature .fonct2 {
+    width: 200px;
+    height: 200px;
+    
+}
+
+.feature2 {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-top: 130px;
+    margin-right: 0px;
+}
+    
+  /* Styles pour la page d'accueil */
+  /* Définissez vos styles personnalisés ici *
+
+  /* Styles pour la page À propos */
+  
+  /* Styles généraux */
+ 
+  
+.aproh2 {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+  }
+  
+.aprop {
+      font-size: 18px;
+      color: #555;
+  }
+  
+  /* Media queries */
+  @media only screen and (max-width: 768px) {
+      /* Styles spécifiques pour les écrans de taille maximale de 768px */
+.aproh2 {
+          font-size: 28px;
+      }
+  
+.aprop {
+          font-size: 16px;
+      }
+  }
+  
+  @media only screen and (max-width: 480px) {
+      /* Styles spécifiques pour les écrans de taille maximale de 480px */
+.aproh2 {
+          font-size: 24px;
+      }
+  
+.aprop {
+          font-size: 14px;
+      }
+  }
+
+  /* Autres styles spécifiques à votre page À propos */
+/* FIN ! */
+  .img-resize {
+      max-width: 1200px;
+      height: 600px;
+      object-fit: cover;
+    }
+    
+/* css bootstrap       */
+
+  /* Styles pour le menu déroulant (visible uniquement sur les téléphones mobiles et les tablettes) 
+  @media (max-width: 767px) {
+      .navbar-nav {
+          flex-direction: column;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-in-out;
+      }
+  
+      .navbar-nav.show {
+          max-height: 300px; /* Hauteur souhaitée du menu déroulant 
+      }
+  
+      .navbar-toggler {
+          display: block;
+      }
+  
+      /* Style pour les éléments de la navbar 
+      .navbar-nav .nav-item {
+          opacity: 0;
+          transform: translateX(50px);
+          transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+  
+      .navbar-nav.show .nav-item {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
+  
+  /* Styles pour les grands écrans (affichage horizontal des éléments de la navbar) 
+  @media (min-width: 768px) {
+      .navbar-nav {
+          flex-direction: row;
+      }
+  
+      .navbar-toggler {
+          display: none;
+      }
+  }*/
+  .carousel {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .carousel-container {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    
+    .carousel-image {
+      width: 100%;
+      height: 300px;
+    }
+  
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+  
+  
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+  
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+  
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+   /*
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+  
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  */
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+     /*.bd-mode-toggle {
+      z-index: 1500;
+    }*/
+  
+  
+    /* css de page inscription    */
+
+.inscri_conteneur {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      box-shadow: 8px 8px 8px rgba(0, 0, 0, .55);
+  }
+  
+.inscrip2 {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+  
+.inscriform {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  
+.inscrilabel, .inscriinput {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 16px;
+  }
+  
+.inscrisubmit {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  
+.inscrisubmit:hover {
+      background-color: #45a049;
+  } /* FIN !*/
+  
+  /* style de page apropos */
+
+  .container {
+      
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+     
+  }
+  .apro_header {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin: 0;
+      
+      
+  }
+  
+  
+  .apro_container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      
+      
+  }
+
+
+.bouton{
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+font-weight: 700;
+background: white;
+color: #0056b3;
+padding: 10px 30px;
+border-radius: 30px;
+margin: 30px 0 10px;
+}
+
+.bouton:hover{
+background-color: #0056b3;
+color: white;
+
+}
+
+  .portfolio{
+    background-color: #0D47A1;
+    width: 70%;
+    height: 100rem;
+    border-radius: 10px;
+
+  }
+
+  .monimage{
+    width: 90%;
+    max-width: 440px;
+    color: aliceblue;
+    text-align: center;
+    padding: 50px 30px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    margin: auto;
+    border-radius: 16px;
+    
+    box-shadow: 0 4px 30px rgba(255, 255, 255, .2);
+  
+  }
+
+  .monimage img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+  }
+
+.monimage h2{
+font-size: 50px;
+font-weight: 600px;
+margin-top: 20px;
+
+}    
+
+.monimage p{
+font-size: 20px;
+max-width: 330px;
+margin: 10px auto;
+
+}
+
+.monimage .reseaux-sociaux img{
+
+width: 50px;
+height: 50px;
+margin: 10px 5px;
+border-radius: 50%;
+transition: background 0.5s;
+
+}
+.monimage .reseaux-sociaux i:hover{
+background: rgb(240, 90, 195);
+
+}
+
+
+  /* Media queries pour les téléphones mobiles */
+  @media only screen and (max-width: 767px) {
+      /* Modifier les styles ici pour les téléphones mobiles */
+      .apro_profile-image {
+        width: 100px;
+        height: 100px;
+        margin: 10px auto;
+      }
+
+      .portfolio{
+         height: 700vh;
+       }
+       
+       .monimage h2{
+font-size: 23px;
+font-weight: 300px;
+margin-top: 20px;
+      
+    }
+    .monimage p{
+font-size: 17px;
+max-width: 295px;
+margin: 10px auto;
+    }
+}
+    
+    /* Media queries pour les tablettes */
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      /* Modifier les styles ici pour les tablettes */
+      .apro_profile-image {
+        width: 120px;
+        height: 120px;
+        margin: 15px auto;
+      }
+      .portfolio{
+        height: auto;
+       }
+       .monimage h2{
+font-size: 27px;
+font-weight: 385px;
+margin-top: 20px;
+      
+    }
+    .monimage p{
+font-size: 17.5px;
+max-width: 310px;
+margin: 10px auto;
+    }
+    
+}
+    
+    /* Media queries pour les écrans larges */
+    @media only screen and (min-width: 1024px) {
+      /* Modifier les styles ici pour les écrans larges */
+      .apro_profile-image {
+        width: 200px;
+        height: 200px;
+        margin: 30px auto;
+      }
+    } /* Fin du css de la page apropro */
+  
+  
+     /* css page forum */
+  
+     .message {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+  }
+  
+  .avatar {
+      float: left;
+      margin-right: 10px;
+  }
+  
+  .pseudo {
+      font-weight: bold;
+  }
+  
+  .date {
+      font-size: 0.8em;
+      color: #888;
+  }
+  
+  .contenu {
+      margin-top: 5px;
+      word-wrap: break-word;
+  }
+  
+  .validation {
+      color: green;
+  }
+  
+  .erreur {
+      color: red;
+  }
+  
+  /* CSS pour rendre la page responsive */
+  jbody {
+  font-family: Arial, sans-serif;
+  
+  background-color: #f5f5f5;
+  }
+  
+  
+  .commentaire {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .commentaire h2 {
+  margin-top: 0;
+  }
+  
+  .formulaire {
+  margin-top: 100px;
+  }
+  
+  .formulaire .forumlabel {
+  display: block;
+  font-weight: bold;
+  margin-bottom: -25px;
+  margin-top: 36px;
+  margin-left: 10%;
+  font-size: 25px;
+  }
+  
+  .formulaire .forumtext,
+  .formulaire .forumtextarea {
+  width: 20%;
+  padding: 10px;
+  margin-bottom: 0px;
+  margin-left: 2.7%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  }
+  
+  .formulaire .forumtextarea {
+  resize: vertical;
+  
+  
+  }
+  
+  .formulaire .forumenvoyer {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 15%;
+  margin-left: 9.2%;
+  margin-top: -10px;
+  font-size: 18px;
+  }
+  
+  .formulaire input[type="submit"]:hover {
+  background-color: #0056b3;
+  }
+  
+  .message {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  }
+  
+  .message .titre {
+  font-weight: bold;
+  margin-bottom: 5px;
+  }
+  
+  /* Avatar */
+  .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  overflow: hidden;
+  }
+  
+  .avatar img {
+  width: 100%;
+  height: auto;
+  }
+  
+  /* Media Queries pour la responsivité */
+  @media (max-width: 600px) {
+  .commentaire {
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  }
+  .formulaire .forumenvoyer {
+      width: 80%;
+      margin: auto;
+      }
+  
+  .formulaire .forumtext,
+  .formulaire .forumtextarea {
+  width: 100%;
+  margin: auto;
+  }
+  }
+  
+  
+  
+  /* Media queries pour les téléphones mobiles */
+  @media only screen and (max-width: 767px) {
+      .formulaire {
+        padding: 10px;
+        width: 100%;
+      }
+
+      .commentaire {
+        
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        }
+    
+      .formulaire .forumtext,
+      .formulaire .forumtextarea {
+        font-size: 14px;
+        width: 100%;
+        margin: auto;
+      }
+    
+      .formulaire .forumenvoyer {
+        font-size: 16px;
+        width: 45%;
+        margin: auto;
+      }
+    }
+    
+    /* Media queries pour les tablettes */
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .formulaire {
+        padding: 15px;
+        width: auto;
+      }
+    }
+    
+    /* Media queries pour les écrans larges */
+    @media only screen and (min-width: 1024px) {
+      .formulaire {
+      width: auto;
+        padding: 20px;
+        
+      }
+    
+    }  /* FIN ! */
+  
+  
+  /* css de la page connexion */
+  
+.conncontainer {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      
+  }
+  
+  .conh1 {
+      text-align: center;
+      margin: 30px 0;
+      color: #333;
+  }
+  
+  .conform {
+      max-width: 400px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 8px 8px 8px rgba(0, 0, 0, .55);
+  }
+  
+  .conlabel {
+      display: block;
+      margin-bottom: 10px;
+      color: #555;
+  }
+  
+  .context,
+  .conpassword {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+  
+  .consubmit {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 25px;
+  }
+  
+  .conerreur {
+      color: #ff0000;
+      font-size: 25px;
+      padding-bottom: 15px;
+  }
+  
+  @media screen and (max-width: 768px) {
+      .conform {
+          max-width: 90%;
+      }
+  }
+  
+  @media screen and (max-width: 480px) {
+      .context,
+      .conpassword,
+      .consubmit {
+          width: 100%;
+      }
+  }
+  
+  /* css de la page inscription */
+  /*body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+  }*/
+  
+  .inscricontainer {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+  }
+  
+  .inscrih2 {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+  
+  .inscriform {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+  }
+  
+  .inscrilabel, .inscriinput {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 16px;
+  }
+  
+  .inscrisubmit {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      margin-top: 50px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  
+  .inscrisubmit:hover {
+      background-color: #45a049;
+  }
+  
+  .affich {
+      color: red;
+      margin-top: 100px;
+      
+      font-size: 30px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: bolder;
+      text-align: center;
+  }
+  
+  
+  /* css de la page tableau de bord */
+  /*body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+  }*/
+  .info{
+    border-left: 8px solid #d63031;
+    background-color: rgba(255, 234, 167, 0.39);
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+    
+  }
+  .info h2{
+    color: #d63031;
+  }
+  .bordh1 {
+      text-align: center;
+      margin: 30px 0;
+      color: #333;
+  }
+  
+  .bordbienvenue {
+      text-align: center;
+      color: #007bff;
+      font-size: 20px;
+  }
+  
+  .bordinformations {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bordlabel {
+      display: block;
+      margin-bottom: 10px;
+      color: black;
+      font-weight: bold;
+  }
+  
+  .bordvaleur {
+      margin-bottom: 20px;
+      color: #555;
+      text-transform: uppercase;
+  }
+  
+  .bordvaleuremail {
+      margin-bottom: 20px;
+      color: #555;
+      
+  }
+  
+  .borddeconnexion {
+      text-align: center;
+      margin-top: 30px;
+  }
+  
+  .borddeconnexion a {
+      color: #007bff;
+      text-decoration: none;
+  }
+  
+  
+  .pagpubh1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #4285F4;
+  }
+  
+  .pagpubform {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pagpublabel {
+      display: block;
+      margin-bottom: 5px;
+  }
+  
+  .pagpubtext,
+  .pagpubtextarea,
+  .pagpubnumber,
+  .pagpubtel{
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 25px;
+  }
+  
+  .pagpubtextarea {
+      height: 100px;
+      
+  }
+  
+  .pagpubselect {
+      width: 50%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 25px;
+      appearance: none;
+      -webkit-appearance: none;
+      background-color: #f7f7f7;
+      background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+  }
+  
+  .pagpubfile:hover {
+      background-color: #f1f2f6;
+  }
+  
+  /* Styles spécifiques pour le bouton de téléchargement de photos */
+  .pagpubcustom-file-upload {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4285F4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+  
+  .pagpubcustom-file-upload:hover {
+      background-color: #3367D6;
+  }
+  
+  /* Styles pour les messages d'erreur ou de validation */
+  .pagpuberreur,
+  .pagpubvalidation {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      width: 45%;
+      margin-left: 26%;
+      margin-top: 100px;
+  }
+  
+  .pagpuberreur {
+      background-color: red;
+      color: #fff;
+  }
+  
+  .pagpubsubmit {
+      width: 200px;
+      font-size: 30px;
+  }
+  
+  .pagpubsubmit:hover {
+      cursor: pointer;
+      
+  }
+  
+  
+  .pagpubvalidation {
+      background-color: #43A047;
+      color: #fff;
+  }
+  
+  /* Styles pour le rendu responsive */
+  
+  /* Pour les écrans de taille petite à moyenne */
+  @media (max-width: 768px) {
+      .pagpubform {
+          padding: 10px;
+      }
+  }
+  
+  /* Pour les écrans de taille moyenne à grande */
+  @media (min-width: 769px) {
+      .pagpubform {
+          max-width: 800px;
+          margin: 0 auto;
+      }
+  }
+  
+  /* Pour les écrans de taille très grande */
+  @media (min-width: 1200px) {
+      .pagpubform {
+          max-width: 1000px;
+      }
+  }
+  
+  
+  
+   /* css de la page recheche_filtrée */
+   .filtremaison {
+      width: 30%;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      float: left;
+  }
+  
+  .filtremaison img {
+      width: 100%;
+      height: auto;
+       /* Vous pouvez ajuster la hauteur selon vos préférences */
+      object-fit: cover; /* Cette propriété permet de conserver le ratio et remplir l'espace sans déformation */
+      object-position: center;
+  }
+  
+  .filtremaison h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+  }
+  
+  .filtremaison p {
+      margin-bottom: 5px;
+  }
+  
+  .filtrepagination {
+      clear: both;
+      margin-top: 10px;
+  }
+  
+  .filtrepagination a,
+  .filtrepagination span {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      margin-right: 5px;
+      text-decoration: none;
+      color: #333;
+  }
+  
+  .filtrepagination .active {
+      background-color: #ccc;
+  }
+
+
+  /* css de pagesearchhouse.php */
+
+  .carousel-image {
+    width: 100%;
+    height: 300px;
+  }
+
+
+.lemien1{
+width: 100%;
+margin: auto;
+}
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #f2f2f2;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+/* css de la page banir1membre*/
+
+.banirh1, .banirh2 {
+    color: #333;
+    text-align: center;
+  }
+  .thead-dark{
+    position: sticky;
+  }
+  .banirtable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .banirth, .banirtd {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .banirth {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  /* Styles spécifiques pour les écrans de petite taille (par exemple, smartphones) */
+  @media screen and (max-width: 767px) {
+    /* Réorganiser le tableau pour une meilleure lisibilité */
+  .banirth {
+      display: none;
+    }
+  
+    .banirtr {
+      display: block;
+      border: 1px solid #ccc;
+      margin: 0 0 10px;
+    }
+  
+    .banirtd {
+      display: block;
+      text-align: center;
+      border-bottom: none;
+    }
+  
+  .banirtd:before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+  
+  /* Styles spécifiques pour les écrans de taille moyenne (par exemple, tablettes) */
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .banirtable {
+      font-size: 14px;
+    }
+  }
+  
+  /* Styles spécifiques pour les écrans de grande taille (par exemple, ordinateurs portables, bureaux, écrans géants) */
+  @media screen and (min-width: 1024px) {
+  .banirtable {
+      font-size: 16px;
+    }
+  
+    /* Mettre en forme les liens de suppression */
+  .banirtd a {
+      color: #ff0000;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #ff0000;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+  
+  .banirtd a:hover {
+      background-color: #ff0000;
+      color: #ffffff;
+    }
+  
+  .banirtd a:focus {
+      outline: none;
+    }
+  } /* FIN ! */
+
+
+  /* css de la page annonce.php */
+
+  .annonceh1, .annonceh2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .annoncetable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .annonceth, .annoncetd {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .annonceth {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .annoncetd img {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Styles spécifiques pour les écrans de petite taille (par exemple, smartphones) */
+  @media screen and (max-width: 767px) {
+    /* Réorganiser le tableau pour une meilleure lisibilité */
+    .annonceth {
+      display: none;
+    }
+  
+    .annoncetr {
+      display: block;
+      border: 1px solid #ccc;
+      margin: 0 0 10px;
+    }
+  
+  .annoncetd {
+      display: block;
+      text-align: center;
+      border-bottom: none;
+    }
+  
+  .annoncetd:before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+  } /* FIN ! */
+  
+  
+
+/* Styles pour le formulaire de contact */
+
+.alert{
+width: 75%;
+margin: auto;
+}
+.contact-form {
+width: 400px;
+margin: 0 auto;
+background-color: #fff;
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.contact-form label {
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.contact-form textarea {
+resize: vertical;
+}
+
+.contact-form input[type="submit"] {
+width: 100%;
+background-color: #007bff;
+color: #fff;
+border: none;
+padding: 12px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+background-color: #0056b3;
+}
+
+.contact-form .message {
+color: green;
+text-align: center;
+margin-top: 10px;
+}
+
+/*    css page themes et conditions   */
+#charte{
+border-top: 5px solid gold;
+} /*  FIN !  */
